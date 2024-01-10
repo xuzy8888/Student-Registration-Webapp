@@ -1,0 +1,12 @@
+3.a.2 (course professor quarter grade):
+
+select grade, count(*) 
+from cpqg 
+where idterm = ? and idcourse = ? and idfaculty = ? group by grade;
+
+
+3.a.3 (course professor grade):
+
+select grade, count(*), sum(units) as total_units 
+from cpg 
+where idcourse = ? and idfaculty = ? group by grade;
